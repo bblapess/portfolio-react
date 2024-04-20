@@ -1,7 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
 
 function App() {
   const [count, setCount] = useState<number>(0);
@@ -11,19 +10,19 @@ function App() {
   };
 
   return (
-    <>
-      <div className="flex w-full flex-row justify-center">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-zinc-900 text-white">
+      <div className="flex w-full flex-row items-center justify-center gap-8">
         <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={viteLogo} className="h-auto w-24" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={reactLogo} className="h-auto w-24 animate-[spin_5s_linear_infinite]" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 className="mt-4 text-2xl">Vite + React</h1>
       <div className="my-4 flex flex-col items-center justify-center gap-2">
         <button
-          className="max-w-max rounded-md bg-zinc-900 px-4 py-2 text-base font-medium text-white shadow-md"
+          className="max-w-max rounded-md bg-zinc-950 px-4 py-2 text-base font-medium text-white shadow-md"
           onClick={handelCount}
         >
           Count: {count}
@@ -33,7 +32,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    </div>
   );
 }
 
